@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Deadline Conflict Detector</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Student Deadline Conflict Detector</h1>
+<p>Identify overloaded academic days before they become a problem.</p>
+</header>
+
+<main>
+<section class="card">
+<h2>Add Academic Deadline</h2>
+<form id="deadlineForm">
+<input id="task" placeholder="Assignment / Exam / Lab" required>
+<input id="subject" placeholder="Subject" required>
+<input id="date" type="date" required>
+<select id="priority">
+<option value="Low">Low</option>
+<option value="Medium" selected>Medium</option>
+<option value="High">High</option>
+</select>
+<input id="hours" type="number" min="1" placeholder="Estimated hours" required>
+<button>Add Deadline</button>
+</form>
+</section>
+
+<section class="summary">
+<div><strong id="total">0</strong><span>Total Tasks</span></div>
+<div><strong id="conflicts">0</strong><span>Conflict Days</span></div>
+<div><strong id="workload">0</strong><span>Total Hours</span></div>
+</section>
+
+<section>
+<h2>Deadline Analysis</h2>
+<div id="calendar"></div>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
